@@ -10,17 +10,20 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WPFUI.ViewModels;
 
-namespace WPFUI {
+namespace WPFUI.Views
+{
     /// <summary>
-    /// Interação lógica para MainWindow.xam
+    /// Lógica interna para ShellView.xaml
     /// </summary>
-    public partial class MainWindow : Window {
-        public MainWindow()
+    public partial class ShellView : Window
+    {
+        public ShellView()
         {
             InitializeComponent();
+            //dataGridContato.ItemsSource = ShellViewModel.listContato;
         }
     }
 }
