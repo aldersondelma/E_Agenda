@@ -23,7 +23,7 @@ namespace WPFUI.Views
         public ShellView()
         {
             InitializeComponent();
-            //dataGridContato.ItemsSource = ShellViewModel.listContato;
+            dataGridContato.ItemsSource = ShellViewModel.listContato;
         }
     }
 }
