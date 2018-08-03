@@ -6,13 +6,14 @@
         xmlns:local="clr-namespace:WPFUI.Views"
         mc:Ignorable="d"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-        FontSize="18"
+        FontFamily="Roboto" FontSize="14"
         Title="ShellView"
         Height="450" Width="750"
         WindowStartupLocation="CenterScreen"  WindowStyle="None"
-        BorderThickness="3">
-    <!--ResizeMode="NoResize"
+        ResizeMode="NoResize"
     AllowsTransparency="True"
+        BorderThickness="3">
+    <!--
     -->
     <Grid>
         <Grid.ColumnDefinitions>
@@ -146,14 +147,13 @@
                               Canvas.Left="10" Canvas.Top="60">
 
                 <DataGrid.Columns>
-                    <DataGridTextColumn Header="Nome"/>
-                    <DataGridTextColumn Header="Sobrenome"/>
-                    <DataGridTextColumn Header="Nome Completo"/>
-                    <DataGridTextColumn Header="Telefone"/>
-                    <DataGridTextColumn Header="E-mail"/>
+                    <DataGridTextColumn Header="Nome" Binding="{Binding Nome}" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="Sobrenome" Binding="{Binding Sobrenome}" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="Nome Completo" Binding="{Binding NomeCompleto}" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="Telefone" Binding="{Binding Telefone}" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="E-mail" Binding="{Binding Email}" IsReadOnly="True"/>
                 </DataGrid.Columns>
-
-            </DataGrid>
+                </DataGrid>
         </Canvas>
     </Grid>
 </Window>
