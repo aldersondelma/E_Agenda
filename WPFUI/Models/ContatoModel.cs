@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Text;
 
 namespace WPFUI.Models
 {
@@ -23,7 +19,7 @@ namespace WPFUI.Models
             this.email = email;
         }
 
-        public string NomeCompleto(string nome, string sobrenome)
+        public string NomeCompleto()
         {
             return $"{nome} {sobrenome}";
         }
@@ -31,7 +27,7 @@ namespace WPFUI.Models
         {
             StringBuilder builder = new StringBuilder();
 
-            builder.Append(NomeCompleto(nome, sobrenome).ToString())
+            builder.Append(NomeCompleto().ToString())
                    .Append(", ")
                    .Append(telefone)
                    .Append(", ")

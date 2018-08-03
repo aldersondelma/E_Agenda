@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using Caliburn.Micro;
 using WPFUI.Models;
 
@@ -79,14 +75,14 @@ namespace WPFUI.ViewModels
             ContatoModel contato;
             contato = new ContatoModel(Nome, Sobrenome, Telefone, Email);
             listContato.Add(contato);
-            //Clear();
+            Clear();
 
             //Message.SetAttach(null,"");
         }
 
         public void Clear()
         {
-            _nome = _sobrenome = _telefone = _email = "";
+            _nome = _sobrenome = _telefone = _email = null;
             NotifyOfPropertyChange(() => Nome);
             NotifyOfPropertyChange(() => Sobrenome);
             NotifyOfPropertyChange(() => NomeCompleto);
