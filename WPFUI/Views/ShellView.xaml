@@ -8,21 +8,21 @@
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         FontFamily="Roboto" FontSize="14"
         Title="ShellView"
-        Height="450" Width="800"
+        Width="auto" Height="425"
         WindowStartupLocation="CenterScreen"  WindowStyle="None"
-        ResizeMode="NoResize"
+        ResizeMode="CanResizeWithGrip"
         AllowsTransparency="True"
         BorderThickness="3">
     <!--
     -->
     <Border BorderBrush="{DynamicResource PrimaryHueMidBrush}"
             BorderThickness="2"
-            Padding="10" Height="auto" Width="auto"
+            Padding="0" Height="auto" Width="auto"
             CornerRadius="5">
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="auto"/>
-                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
             <StackPanel Grid.Column="0">
@@ -118,7 +118,7 @@
 
                         <!-- Botão para salvar -->
                         <Button x:Name="Save"
-                                    Margin="0 0 10 0"
+                                    Margin="0 0 10 0" 
                                     Style="{StaticResource MaterialDesignRaisedDarkButton}">
                             <materialDesign:PackIcon Kind="ContentSave" Width="36"/>
                         </Button>
@@ -142,22 +142,20 @@
             </StackPanel>
         
             <Canvas Grid.Column="1">
-                <materialDesign:Clock Canvas.Right="-430" Canvas.Left="412"
-                                      />
                 <!--Data Grid View -->
                 <DataGrid x:Name="dataGridContato"
                                   ItemsSource="{Binding Path=listContato}"
                                   AutoGenerateColumns="False"
                                   Height="280" Width="auto" 
-                                  Canvas.Right="10"
+                                  Canvas.Right="0"
                                   Canvas.Left="10" Canvas.Top="55">
 
                     <DataGrid.Columns>
-                        <DataGridTextColumn Header="Nome" Binding="{Binding Nome}" IsReadOnly="True"/>
-                        <DataGridTextColumn Header="Sobrenome" Binding="{Binding Sobrenome}" IsReadOnly="True"/>
-                        <DataGridTextColumn Header="Nome Completo" Binding="{Binding NomeCompleto}" IsReadOnly="True"/>
-                        <DataGridTextColumn Header="Telefone" Binding="{Binding Telefone}" IsReadOnly="True"/>
-                        <DataGridTextColumn Header="E-mail" Binding="{Binding Email}" IsReadOnly="True"/>
+                        <DataGridTextColumn Header="Nome" Binding="{Binding nome}" IsReadOnly="True"/>
+                        <DataGridTextColumn Header="Sobrenome" Binding="{Binding sobrenome}" IsReadOnly="True"/>
+                        <DataGridTextColumn Header="Nome Completo" Binding="{Binding nomeCompleto}" IsReadOnly="True"/>
+                        <DataGridTextColumn Header="Telefone" Binding="{Binding telefone}" IsReadOnly="True"/>
+                        <DataGridTextColumn Header="E-mail" Binding="{Binding email}" IsReadOnly="True"/>
                     </DataGrid.Columns>
                         
                     </DataGrid>

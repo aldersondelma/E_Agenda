@@ -1,4 +1,5 @@
 ﻿using System.Windows;
+using WPFUI.ViewModels;
 
 namespace WPFUI.Views
 {
@@ -7,9 +8,13 @@ namespace WPFUI.Views
     /// </summary>
     public partial class ShellView : Window
     {
-        public ShellView()
+		#region Construtor da classe
+		public ShellView()
         {
             InitializeComponent();
+			dataGridContato.ItemsSource = ShellViewModel.listContato;
         }
-    }
+		#endregion
+
+	}
 }
